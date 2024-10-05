@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('images/Background.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            color: #ddd;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1.2rem;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .categories div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .categories div img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        .categories div span {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Link to Home Page */
+        .home-link {
+            margin-top: 40px;
+            font-size: 1.2rem;
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .home-link:hover {
+            color: #00aaff;
+        }
+
+        /* Footer Style */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px; /* Space between icons */
+            margin-top: 10px;
+        }
+
+        .social-icons a img {
+            width: 40px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="nav-bar">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="javascript:history.back()" class="nav-link">Back</a>
+</div>
+
+    <div class="container">
+        <h1>Careers</h1>
+        <p>Explore a variety of career fields and find the one that suits your interests. Use the search bar to quickly locate specific fields or browse through the categories below.</p>
+
+        <!-- Search Bar -->
+        <input type="text" id="careerSearch" placeholder="Search careers..." onkeyup="filterCareers()" />
+
+        <!-- Career Fields -->
+        <div class="categories">
+            <div data-url="technology-careers.html" class="career-field">
+                <img src="https://img.icons8.com/clouds/100/technology.png" alt="Technology">
+                <span>Technology</span>
+            </div>
+            <div data-url="healthcare-careers.html" class="career-field">
+                <img src="https://img.icons8.com/clouds/100/stethoscope.png" alt="Healthcare">
+                <span>Healthcare</span>
+            </div>
+            <div data-url="business-careers.html" class="career-field">
+                <img src="https://img.icons8.com/clouds/100/briefcase.png" alt="Business">
+                <span>Business & Finance</span>
+            </div>
+            <div data-url="engineering-careers.html" class="career-field">
+                 <img src="https://cdn-icons-png.flaticon.com/512/2861/2861721.png" alt="Engineering">
+                <span>Engineering</span>
+            </div>
+            <div data-url="creative-careers.html" class="career-field">
+                <img src="https://img.icons8.com/clouds/100/paint-palette.png" alt="Creative Arts">
+                <span>Creative Arts</span>
+            </div>
+            <div data-url="law-careers.html" class="career-field">
+                <img src="https://img.icons8.com/clouds/100/scales.png" alt="Law & Public Policy">
+                <span>Law & Public Policy</span>
+            </div>
+        </div>
+
+        <!-- Link back to Home Page -->
+        <a href="index.html" class="home-link">Go back to Home Page</a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram"></a>
+            <a href="#"><img src="https://img.icons8.com/color/48/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="https://img.icons8.com/color/48/twitter.png" alt="Twitter"></a>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script> <!-- JavaScript file -->
+</body>
+</html>

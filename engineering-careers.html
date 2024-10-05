@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Careers</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('images/Background.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .main-content {
+            padding-top: 80px;
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: #ddd;
+        }
+
+        .subcategories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .subcategories div {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: auto;
+            height: auto;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+
+        .subcategories div:hover {
+            transform: scale(1.05);
+        }
+
+        .subcategories div img {
+            width: 70px;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .progress-bar-fill {
+            height: 20px;
+            background-color: #4caf50;
+            border-radius: 5px;
+            text-align: right;
+            color: white;
+            padding-right: 10px;
+        }
+
+        .km-tools {
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        .km-tools ul {
+            list-style: disc;
+            padding-left: 20px;
+            color: #ddd;
+        }
+
+        .career-path-map {
+            margin-top: 40px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="nav-bar">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="javascript:history.back()" class="nav-link">Back</a>
+</div>
+
+    <header>
+        <h1>Engineering Careers</h1>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <p>Explore various Engineering roles, including job requirements, growth opportunities, and resources to upskill and stay competitive in the industry.</p>
+
+            <!-- Subcategories for Engineering Careers -->
+            <div class="subcategories">
+                <div>
+                    <a href="civil-engineer.html">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991107.png" alt="Civil Engineer">
+                    </a>
+                    <span>Civil Engineer</span>
+                    <p>Design, build, and supervise infrastructure projects.</p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 60%;">60% Skill Mastery</div>
+                    </div>
+                </div>
+                <div>
+                    <a href="mechanical-engineer.html">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4333/4333600.png" alt="Mechanical Engineer">
+                    </a>
+                    <span>Mechanical Engineer</span>
+                    <p>Design and develop mechanical systems and machinery.</p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 70%;">70% Skill Mastery</div>
+                    </div>
+                </div>
+                <div>
+                    <a href="electrical-engineer.html">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2267/2267573.png" alt="Electrical Engineer">
+                    </a>
+                    <span>Electrical Engineer</span>
+                    <p>Design electrical systems and circuits for various industries.</p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 75%;">75% Skill Mastery</div>
+                    </div>
+                </div>
+                <div>
+                    <a href="software-engineer.html">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331713.png" alt="Software Engineer">
+                    </a>
+                    <span>Software Engineer</span>
+                    <p>Develop, design, and maintain software applications.</p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 65%;">65% Skill Mastery</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Knowledge Management Tools -->
+            <div class="km-tools">
+                <h2>Knowledge Management Tools</h2>
+                <ul>
+                    <li><strong>Faceted Career Exploration:</strong> Explore job roles, required skills, and career growth opportunities in a structured manner.</li>
+                    <li><strong>Learning Resources:</strong> Access courses on platforms like <a href="https://coursera.org" target="_blank">Coursera</a> and <a href="https://udemy.com" target="_blank">Udemy</a>.</li>
+                    <li><strong>Collaborative Tools:</strong> Engage in webinars and forums to connect with professionals.</li>
+                    <li><strong>Case Studies & Knowledge Sharing:</strong> Share your experiences and learn from others.</li>
+                    <li><strong>Real-Time Data on Career Growth:</strong> View salary projections and job growth trends.</li>
+                </ul>
+            </div>
+
+            <!-- Career Path Map -->
+            <div class="career-path-map">
+                <h3>Career Path Map</h3>
+                <iframe width="1128" height="634" src="https://www.youtube.com/embed/FPzuof0piik" title="Career Path By TalentGuard" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Link back to Careers Page -->
+            <a href="careers.html" class="home-link">Go back to Careers Page</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram"></a>
+            <a href="#"><img src="https://img.icons8.com/color/48/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="https://img.icons8.com/color/48/twitter.png" alt="Twitter"></a>
+        </div>
+    </footer>
+</body>
+</html>

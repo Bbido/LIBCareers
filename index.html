@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Library - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('images/Background.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            width: 80%; /* Expands width */
+            margin: 50px auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.6rem;
+            margin-bottom: 40px;
+            color: #ddd;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .categories div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .categories div img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .categories div span {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Footer Style */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto; /* Pushes the footer to the bottom */
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px; /* Space between icons */
+            margin-top: 10px;
+        }
+
+        .social-icons a img {
+            width: 40px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="nav-bar">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="javascript:history.back()" class="nav-link">Back</a>
+</div>
+
+
+    <div class="container">
+        <h1>Career Library</h1>
+        <p>Welcome to the Career Library, your go-to platform for exploring various career paths. Whether you are interested in technology, healthcare, business, or creative fields, our website offers personalized guidance based on your academic performance and interests. Explore different fields and find the right path for you!</p>
+    
+        <!-- Main Navigation for the Website with Icons -->
+        <div class="categories">
+            <div data-url="careers.html">
+                <img src="https://img.icons8.com/clouds/100/briefcase.png" alt="Careers">
+                <span>Careers</span>
+            </div>
+            <div data-url="how-it-works.html">
+                <img src="https://img.icons8.com/clouds/100/info.png" alt="How It Works">
+                <span>How It Works</span>
+            </div>
+            <div data-url="career-resources.html">
+                <img src="https://img.icons8.com/clouds/100/books.png" alt="Career Resources">
+                <span>Resources</span>
+            </div>
+            <div data-url="student-dashboard.html">
+                <img src="https://img.icons8.com/clouds/100/dashboard.png" alt="Dashboard">
+                <span>Dashboard</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram"></a>
+            <a href="#"><img src="https://img.icons8.com/color/48/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="https://img.icons8.com/color/48/twitter.png" alt="Twitter"></a>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

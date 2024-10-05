@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Resources</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('images/Background.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        p, ul {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            color: #ddd;
+            text-align: left;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 30px;
+        }
+
+        ul li a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .resources {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .resources img {
+            width: 120px;
+            margin: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .resources img:hover {
+            transform: scale(1.1);
+        }
+
+        .resources div {
+            max-width: 250px;
+            text-align: center;
+        }
+
+        /* Link to Home Page */
+        .home-link {
+            margin-top: 40px;
+            font-size: 1.2rem;
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .home-link:hover {
+            color: #00aaff;
+        }
+
+        /* Footer Style */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 10px;
+        }
+
+        .social-icons a img {
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+<div class="nav-bar">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="javascript:history.back()" class="nav-link">Back</a>
+</div>
+
+    <div class="container">
+        <h1>Career Resources</h1>
+        <p>Explore a variety of helpful resources to boost your career development. Here are some top links to learn new skills, get certified, and find job opportunities:</p>
+
+        <!-- Career Resources Section -->
+        <div class="resources">
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/512/9513/9513553.png" alt="Coursera">
+                <p><a href="https://www.coursera.org" target="_blank">Coursera</a> - Learn new skills through online courses.</p>
+            </div>
+            <div>
+                <img src="https://img.icons8.com/clouds/100/udemy.png" alt="Udemy">
+                <p><a href="https://www.udemy.com" target="_blank">Udemy</a> - Access certifications and courses to improve your expertise.</p>
+            </div>
+            <div>
+                <img src="https://img.icons8.com/clouds/100/linkedin.png" alt="LinkedIn Jobs">
+                <p><a href="https://www.linkedin.com/jobs" target="_blank">LinkedIn Jobs</a> - Discover job opportunities and connect with professionals.</p>
+            </div>
+        </div>
+
+        <!-- Link back to Home Page -->
+        <a href="index.html" class="home-link">Back to Home</a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram"></a>
+            <a href="#"><img src="https://img.icons8.com/color/48/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="https://img.icons8.com/color/48/twitter.png" alt="Twitter"></a>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
