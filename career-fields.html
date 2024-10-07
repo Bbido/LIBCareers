@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Career Fields</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('images/Background.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .tree {
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+        }
+
+        .tree ul ul {
+            padding-left: 50px;
+        }
+
+        .tree ul:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 1px solid white;
+            width: 0;
+            height: 20px;
+        }
+
+        .tree li {
+            float: left;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+        }
+
+        .tree li:before, .tree li:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 1px solid white;
+            width: 50%;
+            height: 20px;
+        }
+
+        .tree li:after {
+            right: auto;
+            left: 50%;
+            border-left: 1px solid white;
+        }
+
+        .tree li a {
+            border: 1px solid white;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .tree li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .home-link {
+            margin-top: 40px;
+            font-size: 1.2rem;
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .home-link:hover {
+            color: #00aaff;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Explore Career Fields</h1>
+    
+    <!-- Career Tree Diagram -->
+    <div class="tree">
+        <ul>
+            <li>
+                <a href="#">Career Fields</a>
+                <ul>
+                    <li><a href="#">Technology</a>
+                        <ul>
+                            <li><a href="software-developer.html">Software Developer</a></li>
+                            <li><a href="data-scientist.html">Data Scientist</a></li>
+                            <li><a href="web-developer.html">Web Developer</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Healthcare</a>
+                        <ul>
+                            <li><a href="doctor.html">Doctor</a></li>
+                            <li><a href="nurse.html">Nurse</a></li>
+                            <li><a href="physiotherapist.html">Physiotherapist</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Business</a>
+                        <ul>
+                            <li><a href="accountant.html">Accountant</a></li>
+                            <li><a href="business-analyst.html">Business Analyst</a></li>
+                            <li><a href="marketing-manager.html">Marketing Manager</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Library Science</a>
+                        <ul>
+                            <li><a href="librarian.html">Librarian</a></li>
+                            <li><a href="archivist.html">Archivist</a></li>
+                            <li><a href="cataloguer.html">Cataloguer</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Link back to Home -->
+    <a href="index.html" class="home-link">Back to Home</a>
+</div>
+</body>
+</html>
