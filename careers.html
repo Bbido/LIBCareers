@@ -52,9 +52,10 @@
             display: flex;
             justify-content: space-evenly;
             flex-wrap: wrap;
+            margin-top: 40px;
         }
 
-        .categories div {
+        .career-field {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -62,12 +63,39 @@
             cursor: pointer;
         }
 
-        .categories div img {
+        .career-field img {
             width: 80px;
             margin-bottom: 10px;
         }
 
-        .categories div span {
+        .career-field span {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Search Results */
+        #searchResults {
+            display: none;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .search-result {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .search-result img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        .search-result span {
             font-size: 1.2rem;
             margin-top: 10px;
         }
@@ -118,33 +146,36 @@
         <!-- Search Bar -->
         <input type="text" id="careerSearch" placeholder="Search careers..." onkeyup="filterCareers()" />
 
-        <!-- Career Fields -->
+        <!-- Existing Career Fields (these already have HTML pages) -->
         <div class="categories">
-            <div data-url="technology-careers.html" class="career-field">
+            <div class="career-field" onclick="window.location.href='technology-careers.html'">
                 <img src="https://img.icons8.com/clouds/100/technology.png" alt="Technology">
                 <span>Technology</span>
             </div>
-            <div data-url="healthcare-careers.html" class="career-field">
+            <div class="career-field" onclick="window.location.href='healthcare-careers.html'">
                 <img src="https://img.icons8.com/clouds/100/stethoscope.png" alt="Healthcare">
                 <span>Healthcare</span>
             </div>
-            <div data-url="business-careers.html" class="career-field">
+            <div class="career-field" onclick="window.location.href='business-careers.html'">
                 <img src="https://img.icons8.com/clouds/100/briefcase.png" alt="Business">
                 <span>Business & Finance</span>
             </div>
-            <div data-url="engineering-careers.html" class="career-field">
-                 <img src="https://cdn-icons-png.flaticon.com/512/2861/2861721.png" alt="Engineering">
+            <div class="career-field" onclick="window.location.href='engineering-careers.html'">
+                <img src="https://cdn-icons-png.flaticon.com/512/2861/2861721.png" alt="Engineering">
                 <span>Engineering</span>
             </div>
-            <div data-url="creative-careers.html" class="career-field">
+            <div class="career-field" onclick="window.location.href='creative-careers.html'">
                 <img src="https://img.icons8.com/clouds/100/paint-palette.png" alt="Creative Arts">
                 <span>Creative Arts</span>
             </div>
-            <div data-url="law-careers.html" class="career-field">
+            <div class="career-field" onclick="window.location.href='law-careers.html'">
                 <img src="https://img.icons8.com/clouds/100/scales.png" alt="Law & Public Policy">
                 <span>Law & Public Policy</span>
             </div>
         </div>
+
+        <!-- Search Results (hidden initially) -->
+        <div id="searchResults"></div>
 
         <!-- Link back to Home Page -->
         <a href="index.html" class="home-link">Go back to Home Page</a>
@@ -159,6 +190,102 @@
         </div>
     </footer>
 
-    <script src="js/scripts.js"></script> <!-- JavaScript file -->
+    <script>
+        // List of 50 careers (with some linking to the "career in progress" page)
+        const careers = [
+            { name: "Software Developer", url: "software-developer.html", icon: "https://img.icons8.com/clouds/100/technology.png" },
+            { name: "Data Scientist", url: "data-scientist.html", icon: "https://img.icons8.com/clouds/100/technology.png" },
+            { name: "Mechanical Engineer", url: "mechanical-engineer.html", icon: "https://img.icons8.com/clouds/100/engineering.png" },
+            { name: "Social Worker", url: "career-in-progress.html", icon: "https://img.icons8.com/clouds/100/people.png" }, // Career in progress
+            { name: "Marine Biologist", url: "career-in-progress.html", icon: "https://img.icons8.com/clouds/100/microscope.png" }, // Career in progress
+			 { name: "Software Developer", url: "software-developer.html", icon: "https://img.icons8.com/clouds/100/technology.png" },
+        { name: "Data Scientist", url: "data-scientist.html", icon: "https://img.icons8.com/clouds/100/technology.png" },
+        { name: "Mechanical Engineer", url: "mechanical-engineer.html", icon: "https://img.icons8.com/clouds/100/engineering.png" },
+        { name: "Civil Engineer", url: "civil-engineer.html", icon: "https://img.icons8.com/clouds/100/engineering.png" },
+        { name: "Business Analyst", url: "business-analyst.html", icon: "https://img.icons8.com/clouds/100/briefcase.png" },
+        { name: "Nurse", url: "nurse.html", icon: "https://img.icons8.com/clouds/100/stethoscope.png" },
+        { name: "Doctor", url: "doctor.html", icon: "https://img.icons8.com/clouds/100/stethoscope.png" },
+        { name: "Lawyer", url: "lawyer.html", icon: "https://img.icons8.com/clouds/100/scales.png" },
+        { name: "Financial Analyst", url: "financial-analyst.html", icon: "https://img.icons8.com/clouds/100/briefcase.png" },
+        { name: "Graphic Designer", url: "graphic-designer.html", icon: "https://img.icons8.com/clouds/100/paint-palette.png" },
+        { name: "Interior Designer", url: "interior-designer.html", icon: "https://img.icons8.com/clouds/100/paint-palette.png" },
+        { name: "Architect", url: "architect.html", icon: "https://img.icons8.com/clouds/100/paint-palette.png" },
+        { name: "Teacher", url: "teacher.html", icon: "https://img.icons8.com/clouds/100/teacher.png" },
+        { name: "Elementary School Teacher", url: "elementary-school-teacher.html", icon: "https://img.icons8.com/clouds/100/teacher.png" },
+        { name: "High School Teacher", url: "high-school-teacher.html", icon: "https://img.icons8.com/clouds/100/teacher.png" },
+        { name: "University Professor", url: "university-professor.html", icon: "https://img.icons8.com/clouds/100/teacher.png" },
+        { name: "Accountant", url: "accountant.html", icon: "https://img.icons8.com/clouds/100/briefcase.png" },
+        { name: "Marketing Manager", url: "marketing-manager.html", icon: "https://img.icons8.com/clouds/100/marketing.png" },
+        { name: "Human Resources Specialist", url: "hr-specialist.html", icon: "https://img.icons8.com/clouds/100/briefcase.png" },
+        { name: "Web Developer", url: "web-developer.html", icon: "https://img.icons8.com/clouds/100/technology.png" },
+        { name: "Game Developer", url: "game-developer.html", icon: "https://img.icons8.com/clouds/100/technology.png" },
+        { name: "Project Manager", url: "project-manager.html", icon: "https://img.icons8.com/clouds/100/briefcase.png" },
+        { name: "Content Writer", url: "content-writer.html", icon: "https://img.icons8.com/clouds/100/typing.png" },
+        { name: "Video Editor", url: "video-editor.html", icon: "https://img.icons8.com/clouds/100/video-editing.png" },
+        { name: "Film Director", url: "film-director.html", icon: "https://img.icons8.com/clouds/100/video-editing.png" },
+        { name: "Actor", url: "actor.html", icon: "https://img.icons8.com/clouds/100/paint-palette.png" },
+        { name: "Musician", url: "musician.html", icon: "https://img.icons8.com/clouds/100/musical-notes.png" },
+        { name: "Photographer", url: "photographer.html", icon: "https://img.icons8.com/clouds/100/camera.png" },
+        { name: "Pharmacist", url: "pharmacist.html", icon: "https://img.icons8.com/clouds/100/stethoscope.png" },
+        { name: "Veterinarian", url: "veterinarian.html", icon: "https://img.icons8.com/clouds/100/stethoscope.png" },
+        { name: "Physiotherapist", url: "physiotherapist.html", icon: "https://img.icons8.com/clouds/100/stethoscope.png" },
+        { name: "Dentist", url: "dentist.html", icon: "https://img.icons8.com/clouds/100/stethoscope.png" },
+        { name: "Chef", url: "chef.html", icon: "https://img.icons8.com/clouds/100/chef-hat.png" },
+        { name: "Pastry Chef", url: "pastry-chef.html", icon: "https://img.icons8.com/clouds/100/chef-hat.png" },
+        { name: "Travel Agent", url: "travel-agent.html", icon: "https://img.icons8.com/clouds/100/passport.png" },
+        { name: "Airline Pilot", url: "airline-pilot.html", icon: "https://img.icons8.com/clouds/100/airplane.png" },
+        { name: "Flight Attendant", url: "flight-attendant.html", icon: "https://img.icons8.com/clouds/100/airplane.png" },
+        { name: "Journalist", url: "journalist.html", icon: "https://img.icons8.com/clouds/100/typewriter.png" },
+        { name: "Author", url: "author.html", icon: "https://img.icons8.com/clouds/100/typewriter.png" },
+        { name: "Editor", url: "editor.html", icon: "https://img.icons8.com/clouds/100/typewriter.png" },
+        { name: "Public Relations Specialist", url: "pr-specialist.html", icon: "https://img.icons8.com/clouds/100/briefcase.png" },
+        { name: "Event Planner", url: "event-planner.html", icon: "https://img.icons8.com/clouds/100/briefcase.png" },
+        { name: "Social Worker", url: "career-in-progress.html", icon: "https://img.icons8.com/clouds/100/people.png" }, // Career in progress
+        { name: "Psychologist", url: "psychologist.html", icon: "https://img.icons8.com/clouds/100/brain.png" },
+        { name: "Biologist", url: "biologist.html", icon: "https://img.icons8.com/clouds/100/microscope.png" },
+        { name: "Chemist", url: "chemist.html", icon: "https://img.icons8.com/clouds/100/microscope.png" },
+        { name: "Environmental Scientist", url: "environmental-scientist.html", icon: "https://img.icons8.com/clouds/100/tree.png" },
+        { name: "Marine Biologist", url: "career-in-progress.html", icon: "https://img.icons8.com/clouds/100/microscope.png" }, // Career in progress
+        { name: "Quantum Physicist", url: "career-in-progress.html", icon: "https://img.icons8.com/clouds/100/atom.png" }, // Career in progress
+        { name: "Data Engineer", url: "career-in-progress.html", icon: "https://img.icons8.com/clouds/100/technology.png" }, // Career in progress
+        { name: "Cybersecurity Specialist", url: "career-in-progress.html", icon: "https://img.icons8.com/clouds/100/technology.png" } // Career in progress
+    ];
+           
+		
+		
+
+        // Function to display search results
+        function displaySearchResults(careerList) {
+            const searchResultsDiv = document.getElementById("searchResults");
+            searchResultsDiv.innerHTML = ""; // Clear previous results
+
+            careerList.forEach(career => {
+                const careerDiv = document.createElement("div");
+                careerDiv.className = "search-result";
+                careerDiv.innerHTML = `
+                    <img src="${career.icon}" alt="${career.name}">
+                    <span>${career.name}</span>
+                `;
+                careerDiv.onclick = () => window.location.href = career.url;
+                searchResultsDiv.appendChild(careerDiv);
+            });
+
+            // Show the search results
+            searchResultsDiv.style.display = 'flex';
+        }
+
+        // Filter careers based on search input
+        function filterCareers() {
+            const searchInput = document.getElementById("careerSearch").value.toLowerCase();
+            const filteredCareers = careers.filter(career => career.name.toLowerCase().includes(searchInput));
+
+            // Only display the search results if input is non-empty
+            if (searchInput.length > 0) {
+                displaySearchResults(filteredCareers);
+            } else {
+                document.getElementById("searchResults").style.display = 'none'; // Hide if input is empty
+            }
+        }
+    </script>
 </body>
 </html>

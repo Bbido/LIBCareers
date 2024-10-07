@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Details</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="career-title">Career Title</h1>
+        <p id="career-description">This is the career description. Details will be loaded here dynamically.</p>
+        <p><strong>Average Salary:</strong> <span id="career-salary"></span></p>
+        <p><strong>Education Required:</strong> <span id="career-education"></span></p>
+        <p><strong>Skills:</strong> <span id="career-skills"></span></p>
+    </div>
+
+    <script src="js/careerData.js"></script>
+    <script>
+        // Get the URL parameter (career)
+        const params = new URLSearchParams(window.location.search);
+        const career = params.get('career');
+
+        // Get career data from the JSON object
+        const careerData = careers[career];
+
+        // Check if career exists
+        if (careerData) {
+            document.getElementById('career-title').innerText = careerData.title;
+            document.getElementById('career-description').innerText = careerData.description;
+            document.getElementById('career-salary').innerText = careerData.salary;
+            document.getElementById('career-education').innerText = careerData.education;
+            document.getElementById('career-skills').innerText = careerData.skills.join(', ');
+        } else {
+            document.querySelector('.container').innerHTML = '<p>Career not found.</p>';
+        }
+    </script>
+</body>
+</html>
